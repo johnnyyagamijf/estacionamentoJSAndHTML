@@ -1,4 +1,5 @@
-
+// 
+const valueHour =  2.00; 
 var timer = getElementById('timer');
 
 var dateInit = new Date();
@@ -51,16 +52,16 @@ btn.addEventListener('click', function (event) {
     // saves to storage
     setValuesToLocalStorage(cars);
 
-    // adiciona o carro na tabela
+    // add car into table
     addCar(newCar);
 
     showMessage('Veículo cadastrado com sucesso!', true)
 
-    // limpa os inputs
+    // clen inputs
     car.value = '';
     plate.value = ''
 
-    // faz o reload da lista
+    // list reload 
     onloadCars();
 });
 
@@ -94,7 +95,7 @@ function addCar(data) {
         '<td>' +  new Date(data.initDate).toLocaleTimeString()  + '</td>' +
         '<td>' + viewData.dateEnd + '</td>' +
         '<td class="td-valor">' + viewData.value + '</td>' +
-        '<td><button class="btn btn-danger" onclick="removeCar(\'' + data.plate + '\')" id="trash">Remover</button></td>' +
+        // '<td><button class="btn btn-danger" onclick="removeCar(\'' + data.plate + '\')" id="trash">Remover</button></td>' +
         '<td><button class="btn btn-success" ' + viewData.disable + 
         ' onclick="finallyTimer(\'' + data.plate + '\')" id="' + data.plate + '">' + viewData.text +'</button></td>' +
         '</tr>';
@@ -115,7 +116,6 @@ function finallyTimer(plate) {
 }
 
 function calcValue(minutes){
-    const valueHour =  2.00;
     return (Math.ceil(minutes / 15) * valueHour);
 }
 
