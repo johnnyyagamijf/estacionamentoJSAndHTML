@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Estacionamento de veiculos</h2>
+        
+        <form class="form-group">
+              <label class="label-form" for="">Nome do veículo</label>
+            <input type="text"  class="input-form" name="car" id="car" placeholder="veículo...">
+            <label class="label-form" for="">Placa do veículo</label>
+            <input type="text" class="input-form" name="plate" id="plate" placeholder="placa...">
+            <button class="btn-form" id="btn-form" type="submit">Cadastrar</button>
+        </form>
+        <div class="message" id="message"></div>
+        <div class="jumbotron">
+            <p>Valor da fração de 15 min R$ 2,00</p>
+            <h2 id="timer"></h2>
+            
+            <table class="table table-striped table-hover" id="table">
+                <thead>
+                    <tr>
+                        <th>Carro</th>
+                        <th>Placa</th>
+                        <th>Hora início</th>
+                        <th>Hora fim</th>
+                        <th>R$</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="carros-patio" id="carros-patio"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="public/js/jquery.js"></script>
+    <script src="public/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/1176470398.js" crossorigin="anonymous"></script>
+    <script src="public/js/app.js"></script>
+    <script src="public/js/moment.js"></script>
+
+    <script type="text/javascript">
+    var date = new Date();
+    console.log(date.toLocaleDateString() + ' ' + date.toLocaleTimeString() );
+        var data1 = moment('19/08/2013 01:00', "DD/MM/YYYY hh:mm");
+        var data2 = moment('18/08/2013 21:00', "DD/MM/YYYY hh:mm");
+        var diferenca = data1.diff(data2, 'hours');
+
+        console.log('aqui está a diferença', diferenca); // 4
+ </script>
+
+</body>
+</html>

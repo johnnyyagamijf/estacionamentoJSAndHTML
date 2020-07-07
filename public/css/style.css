@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    background: url(../img/car.jpeg)no-repeat;
+    -webkit-background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size: 100%;
+    font-weight: bold;
+}
+.container{
+    width: 100vw;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+h2#timer{
+    color: seagreen;
+    font-weight: bold;
+}
+h2{
+    margin-top: 20px;
+    box-shadow: 8px 10px 8px #888888;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+.form-group{
+    width: 100%vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+p{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;   
+}
+
+.label-form{
+    margin-top: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.input-form{
+    height: 32px;
+    width: 20vw;
+    border-radius: 5px;
+    background: none;
+    border: 1px solid #ddd;
+    color: #fff; 
+} 
+
+.btn-form{
+    margin-top: 15px;
+    cursor: pointer;
+    background: #13458e;
+    border-radius: 5px;
+    color: #fff;
+    height: 32px;
+    font-weight: bold;
+    outline:none;
+    
+}
+
+.btn-form:focus, button:active {
+    outline: none;
+}
+
+.jumbotron{
+    width: 100%vw !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+#table{
+    width: 100%vw; 
+}
